@@ -1,0 +1,33 @@
+Cấu trúc của git - image1
+wordspace (laptop cá nhân) - staging area (khu vực trung gian) - local repo (kho lưu trữ cục bộ) - remote repo (kho lưu trữ từ xa -github)
+Git:
+git clone [ssh link]: clone 1 repo về máy
+git add ./[folder name change] : THêm folder mới vào khu vực trugn gian
+git status : kiểm tra
+git commit -m "message" : Đẩy source vào khu vực lưu trữ cục bộ
+git push origin main : Đẩy code lên khu vực lưu trữ từ xa
+git remote : xem các remote đã thêm
+git remote add orgin [repo link]: thêm một remote để làm việc
+git diff: xem các thay đổi trên tệp
+git reset HEAD~1 : xóa commit gần đây nhất
+git checkout . : quay trở lại commit cần nhất
+git log : xem lịch sử commit
+git pull origin [branch]: tải các thay đổi mới trên git về
+git fetch: lấy commit từ các nhánh khác và đẩy vào kho lưu trữ cục bộ
+git merge: hợp nhất commit vào nhanh chính của mình sau fetch
+touch .gitignore: tạo các tệp cần bỏ qua
+Gitflow: 
+Flow - image2
+1. Một develop nhánh được tạo ra từ main
+
+2. Một release nhánh được tạo ra từ develop
+
+3. Feature các nhánh được tạo ra từ develop
+
+4. Khi a feature hoàn thành nó được hợp nhất vào develop nhánh
+
+5. Khi release nhánh được hoàn thành, nó được sáp nhập vào developvàmain
+
+6. Nếu phát hiện ra sự cố, main một hotfixnhánh sẽ được tạo từmain
+
+7. Khi hotfixhoàn tất, nó được hợp nhất với cả hai developvàmain
